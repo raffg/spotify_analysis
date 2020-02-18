@@ -1,10 +1,10 @@
 # Spotify Analysis
 
-data from
+data from:
 - https://www.kaggle.com/tomigelo/spotify-audio-features
 - https://www.tableau.com/about/blog/2019/7/how-visualize-spotify-music-trends-tableau
 
-additional data
+additional data:
 - https://www.kaggle.com/edumucelli/spotifys-worldwide-daily-song-ranking
 - https://www.kaggle.com/zaheenhamidani/ultimate-spotify-tracks-db
 
@@ -18,7 +18,7 @@ additional data
 
 ![Mood of music streamed globally](images/mood_by_day.png)
 
+#### In Hispanic countries, lively Latin music is popular all year round
 ![Mood of music streamed](images/mood_by_country.png)
-In Hispanic countries, lively Latin music is popular all year round
 
 ![Danceability of music streamed](images/danceability_by_country.png)
