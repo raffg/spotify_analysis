@@ -42,9 +42,11 @@ In my analysis, December has the highest average valence, followed by August, an
 In any given year, I did see December as the highest. However, in 2018 (a particularly sad year?) the summer featured lower valence scores than February. Additionally, the inclusion of 2020 data, which is much higher than the previous years, acted to inflate February's average across time. Therefore, I chose to exclude 2020 data. Compare these two charts, one with 2020 included and the other without:
 
 ![Mood by country](images/mood_by_country.png)
+
 Above: including Jan/Feb 2020
 
 Below: excluding Jan/Feb 2020
+
 ![Mood by country](images/mood_by_country2.png)
 
 This doesn't change the charts a great deal, however one key point The Economist noted in their chart was that southern hemisphere New Zealand also experiences a dip in valence in February despite the reversal of their summers and winters compared to the northern hemisphere. When I include February 2020, I see the opposite effect as to what The Economist noticed, but when I exclude February 2020, then I do see the dip; however much less pronounced that what The Economist saw. Following The Economist's convention of including all available data though, I would include February and because 2020 was so much happier than previous years, this proves the opposite point to be true. Including this data does unfortunately seem somewhat arbitrary to me - what do we call an appropriate cutoff point? Including an equal number of months in each year seems reasonable to me though, so slightly less arbitrary to exclude the 2020 data. I'll be curious to rerun this analysis at the end of the year and see what it looks like then.
