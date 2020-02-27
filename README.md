@@ -19,33 +19,33 @@ Other features available via the API include tempo, energy, key, mode, and dance
 
 ### The Analysis
 My analysis showed a very similar distribution of data compared with The Economist's analysis:
-![Economist histogram](images\economist_histogram.png)
+![Economist histogram](images/economist_histogram.png)
 source: https://www.economist.com/graphic-detail/2020/02/08/data-from-spotify-suggest-that-listeners-are-gloomiest-in-february
 
-![Mood distribution](images\mood_distribution.png)
+![Mood distribution](images/mood_distribution.png)
 
 Despite the different appearances of our two charts, the shape of the two kernel density estimations is very similar (if you're not familiar, a kernel density estimation, or KDE, is pretty much just a smooth histogram with the area under the curve summing up to 1). The locations of those key songs along the valence axis also matches up. You can see that on average, Brazilians listen to "happier" music than the rest of the world, and in the United States listeners stream music which on average is less happy than the rest of the world. As we'll see, the music of Latin America typical scores very high in valence.
 
 It's the second chart from The Economist where I see some key differences.
 
-![Economist chart](images\economist_by_country.png)
+![Economist chart](images/economist_by_country.png)
 source: https://www.economist.com/graphic-detail/2020/02/08/data-from-spotify-suggest-that-listeners-are-gloomiest-in-february
 
 First, let's look at that ten-day moving average chart in the upper right corner. It finds that February displays the lowest average valence and July the highest. Here is what I found:
 
-![Mood by month](images\mood_by_month.png)
+![Mood by month](images/mood_by_month.png)
 
 In my analysis, December has the highest average valence, followed by August, and then in third place is July. I initially found some very different average valence scores for February as well, and so investigated why our data sets could be different. The Economist used data from January 1st, 2017 (the earliest available on Spotify Charts) until January 29th, 2020 (presumably, when they performed their scraping). I had all of that data, plus almost all of February 2020 as well. Without aggregating by month, as the above plot does, and also not performing a moving average, I saw a much wider variance in the same month from year to year than I expected:
 
-![Mood across time](images\mood_across_time.png)
+![Mood across time](images/mood_across_time.png)
 
 In any given year, I did see December as the highest. However, in 2018 (a particularly sad year?) the summer featured lower valence scores than February. Additionally, the inclusion of 2020 data, which is much higher than the previous years, acted to inflate February's average across time. Therefore, I chose to exclude 2020 data. Compare these two charts, one with 2020 included and the other without:
 
-![Mood by country](images\mood_by_country.png)
+![Mood by country](images/mood_by_country.png)
 Above: including Jan/Feb 2020
 
 Below: excluding Jan/Feb 2020
-![Mood by country](images\mood_by_country2.png)
+![Mood by country](images/mood_by_country2.png)
 
 This doesn't change the charts a great deal, however one key point The Economist noted in their chart was that southern hemisphere New Zealand also experiences a dip in valence in February despite the reversal of their summers and winters compared to the northern hemisphere. When I include February 2020, I see the opposite effect as to what The Economist noticed, but when I exclude February 2020, then I do see the dip; however much less pronounced that what The Economist saw. Following The Economist's convention of including all available data though, I would include February and because 2020 was so much happier than previous years, this proves the opposite point to be true. Including this data does unfortunately seem somewhat arbitrary to me - what do we call an appropriate cutoff point? Including an equal number of months in each year seems reasonable to me though, so slightly less arbitrary to exclude the 2020 data. I'll be curious to rerun this analysis at the end of the year and see what it looks like then.
 
@@ -53,20 +53,20 @@ A key finding of mine though which is most certainly different than what The Eco
 
 I also sorted the countries into continents to look at wider trends. As The Economist found, Latin American countries do indeed stream *much* happier music than the rest of the world. Also to note is that in every continent except Europe, December is the happiest month; and February the saddest everywhere except Africa and Australia:
 
-![Mood by continent](images\mood_by_continent.png)
+![Mood by continent](images/mood_by_continent.png)
 
 Additionally, I looked at mood by day. As I had expected, I found Saturday to be the happiest.
 
-![Mood by day](images\mood_by_day.png)
+![Mood by day](images/mood_by_day.png)
 
 I also looked at this chart for just the US and New Zealand. I found Friday to be the saddest day in the United States and Sunday to be the happiest. Any theories why this may be? New Zealand exhibits the behavior I'd probably most expect, with Monday being the saddest and Saturday the happiest.
 
-![Mood by day](images\mood_by_day_us.png)
-![Mood by day](images\mood_by_day_nz.png)
+![Mood by day](images/mood_by_day_us.png)
+![Mood by day](images/mood_by_day_nz.png)
 
 Finally, I did spend a bit of time looking into the other features available via the Spotify API and made one last chart, danceability for each country:
 
-![Danceability by country](images\danceability_by_country.png)
+![Danceability by country](images/danceability_by_country.png)
 
 Here, I found Fridays to feature more danceable music than Mondays, as I was expecting. Furthermore, the ordering of the countries shifts around a lot from the valence chart. For instance, the United States is at the sadder end of the valence spectrum but at the more danceable end in this chart. I also noted that the lowest countries as ranked by danceability are all Asian countries with traditional music styles which do not fit the "standard" western 12-tone, 4-beats-to-a-bar system. I wonder if the algorithm has a tough time predicting danceability when the structure is so different than the majority of training samples.
 
